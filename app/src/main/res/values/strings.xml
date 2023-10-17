@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CSCI-323 Midterm</string>
+
+    <string name="hello_blank_fragment">PLACEHOLDER</string>
+
+    <string name="main_text">Welcome to the game</string>
+    <string name="play_game_button">Play Game</string>
+    <string name="view_high_score_button">View High Scores</string>
+    
+    <string name="player_name">Player name:</string>
+    <string name="enter_guess">Enter your guess:</string>
+    <string name="ok_button">OK</string>
+
+    <string name="guess_results">Number of attempts: 0</string>
+
+    <string name="back_to_home">Start Screen</string>
+</resources>

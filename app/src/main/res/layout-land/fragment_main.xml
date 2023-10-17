@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/textview_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:text="@string/main_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <!--The margin is just so the buttons do not appear together in the design preview-->
+        <Button
+            android:id="@+id/button_play_game"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:textSize="40sp"
+            android:text="@string/play_game_button"></Button>
+
+        <Button
+            android:id="@+id/button_view_high_scores"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:textSize="40sp"
+            android:text="@string/view_high_score_button"></Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
