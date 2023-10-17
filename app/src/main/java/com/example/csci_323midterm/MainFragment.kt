@@ -27,13 +27,14 @@ class MainFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        // Sets the lastScore of the viewModel based on arguments received through SafeArgs
+        viewModel.setLastScore(MainFragmentArgs.fromBundle(requireArguments()).recentScore)
+
         // Sets the viewModel to observe the viewModels lastScore variable
         viewModel.lastScore.observe(viewLifecycleOwner, Observer{score ->
             val newText = "$score Wanna play again?"
             binding.textviewMain.text = newText
         })
-        // Sets the lastScore of the viewModel based on arguments received through SafeArgs
-        viewModel.setLastScore(MainFragmentArgs.fromBundle(requireArguments()).recentScore)
 
         // Set the play game button to navigate to the game fragment
         binding.buttonPlayGame.setOnClickListener {

@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.example.csci_323midterm.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
     private var _binding : FragmentGameBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel : GameViewModel by activityViewModels()
+    private val viewModel : GameViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

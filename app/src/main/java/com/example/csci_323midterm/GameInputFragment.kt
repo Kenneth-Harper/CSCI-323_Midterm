@@ -6,20 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.csci_323midterm.databinding.FragmentGameBinding
+import com.example.csci_323midterm.databinding.FragmentGameInputBinding
 
 class GameInputFragment : Fragment() {
-    private var _binding : FragmentGameBinding? = null
+    private var _binding : FragmentGameInputBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel : GameViewModel by activityViewModels()
+    private lateinit var viewModel : GameViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Set up the binding and viewModel
-        _binding = FragmentGameBinding.inflate(inflater, container, false)
+        _binding = FragmentGameInputBinding.inflate(inflater, container, false)
         val view = binding.root
+        viewModel = ViewModelProvider(requireActivity()).get(GameViewModel::class.java)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
