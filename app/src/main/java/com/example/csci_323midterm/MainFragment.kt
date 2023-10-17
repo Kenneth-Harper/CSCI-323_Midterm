@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.csci_323midterm.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -16,10 +17,13 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Set up the binding and viewModel
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val view = binding.root
-
+        val viewModelFactory = MainFragmentViewModelFactory()
+        val viewModel = ViewModelProvider(this, viewModelFactory).get(MainFragmentViewModel::class.java)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         return view
     }

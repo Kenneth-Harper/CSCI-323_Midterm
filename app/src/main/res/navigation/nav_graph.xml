@@ -9,5 +9,34 @@
         android:id="@+id/mainFragment"
         android:name="com.example.csci_323midterm.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_highScoreFragment"
+            app:destination="@id/highScoreFragment" />
+        <argument
+            android:name="recentScore"
+            app:argType="string"
+            android:defaultValue='"null"' />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.csci_323midterm.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/highScoreFragment"
+        android:name="com.example.csci_323midterm.HighScoreFragment"
+        android:label="fragment_high_score"
+        tools:layout="@layout/fragment_high_score" >
+        <action
+            android:id="@+id/action_highScoreFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

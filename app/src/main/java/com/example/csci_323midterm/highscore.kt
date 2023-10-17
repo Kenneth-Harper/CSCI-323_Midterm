@@ -11,4 +11,6 @@ data class Highscore(
     @ColumnInfo(name = "player_name")
     var playerName: String="",
     @ColumnInfo(name = "number_guesses")
-    var numberGuesses: Int=0)
+    var numberGuesses: Int=0,
+    @ColumnInfo(name = "score_display")
+    var scoreDisplay: String="$playerName score: $numberGuesses")
