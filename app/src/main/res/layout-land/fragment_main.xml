@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.csci_323midterm.MainFragmentViewModel" />
+            type="com.example.csci_323midterm.GameViewModel" />
     </data>
 
     <LinearLayout
