@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.csci_323midterm.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -24,6 +26,25 @@ class MainFragment : Fragment() {
         val viewModel = ViewModelProvider(this, viewModelFactory).get(MainFragmentViewModel::class.java)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
+        // Sets the viewModel to observe the viewModels lastScore variable
+        viewModel.lastScore.observe(viewLifecycleOwner, Observer{score ->
+            val newText = "$score Wanna play again?"
+            binding.textviewMain.text = newText
+        })
+        // Sets the lastScore of the viewModel based on arguments received through SafeArgs
+        viewModel.setLastScore(MainFragmentArgs.fromBundle(requireArguments()).recentScore)
+
+        // Set the play game button to navigate to the game fragment
+        binding.buttonPlayGame.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToGameFragment()
+            this.findNavController().navigate(action)
+        }
+        // Set the highscore button to navigate to the highscore fragment
+        binding.buttonViewHighScores.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToHighScoreFragment()
+            this.findNavController().navigate(action)
+        }
 
         return view
     }

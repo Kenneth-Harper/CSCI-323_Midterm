@@ -9,10 +9,16 @@
             type="com.example.csci_323midterm.GameViewModel" />
     </data>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="30sp"
-        android:text="@string/guess_results" />
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:text="@string/guess_results" />
+
+    </LinearLayout>
 </layout>

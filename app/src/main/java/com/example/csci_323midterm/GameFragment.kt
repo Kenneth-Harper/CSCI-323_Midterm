@@ -23,6 +23,19 @@ class GameFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        // Adding the input game fragment to the view
+        val inputFragmentTransaction = childFragmentManager.beginTransaction()
+        val inputFragment = GameInputFragment()
+        inputFragmentTransaction.replace(binding.frameInput.id, inputFragment)
+        inputFragmentTransaction.commit()
+
+        // Adding the result game fragment to the view
+        val resultFragmentTransaction = childFragmentManager.beginTransaction()
+        val resultFragment = GameResultFragment()
+        resultFragmentTransaction.replace(binding.frameResult.id, resultFragment)
+        resultFragmentTransaction.commit()
+
+
         return view
     }
 }
