@@ -24,6 +24,7 @@
                 android:id="@+id/textview_player_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:textSize="30sp"
                 android:text="@string/player_name"></TextView>
 
@@ -32,6 +33,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:textSize="30sp"></EditText>
         </LinearLayout>
 
@@ -40,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:gravity="center_vertical"
             android:textSize="30sp"
             android:text="@string/enter_guess"></TextView>
 
@@ -51,7 +54,7 @@
 
             <ImageButton
                 android:id="@+id/imagebutton_decrement"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -63,11 +66,12 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:inputType="number"></EditText>
 
             <ImageButton
                 android:id="@+id/imagebutton_increment"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"

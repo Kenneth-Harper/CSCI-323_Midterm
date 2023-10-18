@@ -12,4 +12,8 @@
     <string name="guess_results">Number of attempts: 0</string>
 
     <string name="back_to_home">Start Screen</string>
+
+    <string name="delete_confirmation">Are you sure you want to delete this high score?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
