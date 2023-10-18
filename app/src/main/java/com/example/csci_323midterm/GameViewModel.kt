@@ -184,7 +184,7 @@ class GameViewModel : ViewModel()
                 val newScore = Highscore()
                 newScore.playerName = if (playerName == "") "UnnamedPlayer" else playerName
                 newScore.numberGuesses = numberGuesses.value!!
-                newScore.scoreDisplay = "$playerName score: ${numberGuesses.value!! + 1}"
+                newScore.scoreDisplay = "${newScore.playerName} score: ${numberGuesses.value!! + 1}"
                 viewModelScope.launch {
                     dao.insert(newScore)
                 }

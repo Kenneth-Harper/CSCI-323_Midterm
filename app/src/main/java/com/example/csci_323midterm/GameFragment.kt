@@ -44,8 +44,9 @@ class GameFragment : Fragment() {
         viewModel.navigateToHome.observe(viewLifecycleOwner, Observer { bool ->
             if (bool)
             {
+                val scoreName = if (viewModel.playerName == "") "UnnamedPlayer" else viewModel.playerName
                 val action = GameFragmentDirections.actionGameFragmentToMainFragment()
-                action.recentScore = "${viewModel.playerName} score: ${viewModel.numberGuesses.value}"
+                action.recentScore = "$scoreName score: ${viewModel.numberGuesses.value}"
                 this.findNavController().navigate(action)
             }
         })
