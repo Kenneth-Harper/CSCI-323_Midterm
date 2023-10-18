@@ -9,7 +9,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.csci_323midterm.databinding.FragmentHighScoreBinding
-import com.example.csci_323midterm.databinding.FragmentMainBinding
 
 
 class HighScoreFragment : Fragment() {
@@ -42,6 +41,7 @@ class HighScoreFragment : Fragment() {
 
         val adapter = HighscoreItemAdapter(::deleteClicked)
         binding.recyclerviewHighscoreList.adapter = adapter
+        adapter.registerAdapterDataObserver(EmptyHighscoreObserver(binding.recyclerviewHighscoreList, binding.textviewEmptyScorelist))
 
         viewModel.scores.observe(viewLifecycleOwner, Observer {
             it?.let {

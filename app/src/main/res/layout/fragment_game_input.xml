@@ -67,7 +67,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:inputType="number"></EditText>
+                android:inputType="number"
+                android:textSize="40sp"></EditText>
 
             <ImageButton
                 android:id="@+id/imagebutton_increment"

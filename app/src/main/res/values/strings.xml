@@ -16,4 +16,6 @@
     <string name="delete_confirmation">Are you sure you want to delete this high score?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <string name="empty_highscores">No high scores yet.</string>
 </resources>

@@ -25,6 +25,15 @@
             android:gravity="top"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+        <TextView
+            android:id="@+id/textview_empty_scorelist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:text="@string/empty_highscores"></TextView>
+
         <!--Added this button to give a way out of the high score screen, but I know it wasn't in the requirements-->
         <Button
             android:id="@+id/button_start_screen"
