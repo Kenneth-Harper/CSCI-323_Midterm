@@ -1,29 +1,33 @@
-# Math Solver
+# Number Guessing Midterm
 
-This project is an arithmetic practice app that was also an exploration into screen management and passing values between separate screens. 
+This project is a number guessing game, where the user can achieve high scores, and is able to view those in a separate screen.
 
 ## Functionality 
 
 The following **required** functionality is completed:
 
-* [ ] Start screen has radio buttons to pick difficulty and operation.
-* [ ] User can solve problems in the question screen.
-* [ ] User can see their score in the third screen.
+* [ ] Start screen has two buttons that go to a game screen or high score screen based on the button.
+* [ ] User can give their name in the game screen.
+* [ ] User can make guesses in the game screen.
+* [ ] User can increment or decrement a written guess easily using image buttons on either side of the guess.
+* [ ] User can see how many guesses they've made for a number in the bottom fragment in the game screen.
+* [ ] User can see saved high scores in the high score screen.
+* [ ] User can delete high scores by clicking on the delete button by a high score in the high score screen.
 
 The following **extensions** are implemented:
 
 * Safeargs
+* Room
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src="" title='Video Walkthrough' width='50%' alt='Video Walkthrough' />
+<img src="showcase.gif" title='Video Walkthrough' width='50%' alt='Video Walkthrough' />
 
 ## Notes
 
-I encountered many issues with the safeargs plugin, as it would not create the necessary directions files that it should have, despite me rebuilding the project, changing versions, and trying many other means of getting it to load properly. 
-Otherwise I encountered few issues.
+I encountered an issue with making the recycler view's empty state display a textview.
 
 ## License
 
